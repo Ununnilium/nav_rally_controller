@@ -78,8 +78,8 @@ The ESP32 needs 3.3V, but has a built-in converter, The built-in converter conve
 Ground –) must be connected to one of the "GND" pins. The ground side od the buttons/switches, of the 5V converter and GND of ESP32 must all be connected to the motorcycle's ground, e.g. with a ring connector to the battery or frame.
 
 
-1. drill a hole big enough for the etehrnet cable
-2. cut around 20cm of the ethernet cable, remove a few millimeters of the insulation and pull it through the hole into the case
+1. Drill a hole big enough for the ethernet cable
+2. Cut around 20cm of the ethernet cable, remove a few millimeters of the insulation and pull it through the hole into the case
 3. Tin-coat the wires, and if the ESP32 has pins soldered, tin-coat the needed pins
 4. Solder the wires to the pins. I recommend to use the brown or blue wire for ground. The other colours do not matterm, just use pins between 13-33 or 4 or 5, e.g. <img src="img/drawing.svg" width="800"/>
 5. Shorten the other part of the ethernet cabel to the desired length and solder it to the switch unit. Heat shrinking connectors are very convenient for this.
@@ -96,15 +96,15 @@ Ground –) must be connected to one of the "GND" pins. The ground side od the b
    int minus_previous_track_btn = 13;
    ```
 
-7. connect the buttons/switch with the RJ45 coupler, upload the code and open the serial console
+7. Connect the buttons/switch with the RJ45 coupler, upload the code and open the serial console
 8. Write down the current pin assocation in the code. Press every button/switch and write down the output, to correct the assocation in the code. When the switch is used, the messages will change a few time. That is no problem, the switch is not debounced because it is not necessary.
 9. Correct the pin numbers in the code and upload it
 10. Test the buttons/switch with OsmAnd und Rally Roadbook Reader
-11. remove USB cabel, then solder cables to 12V side of converter (drill a hole in case and pull it through). Connect to a 12V battery, check with a multimeter if the 5V pin is located like in this photo: <br /> <img src="img/converter.jpg" width="350"/>
+11. Remove USB cabel, then solder cables to 12V side of converter (drill a hole in case and pull it through). Connect to a 12V battery, check with a multimeter if the 5V pin is located like in this photo: <br /> <img src="img/converter.jpg" width="350"/>
 12. Solder the +5V side of the converter with some leftover cable to VIN of the ESP32
 13. Solder – of the converter (– of 12 and 5V side is the same) to GND of ESP32. Ground side of the butoons/switch, GND of ESP32 –of the converter must all be connected to ground of the motorcycle
 14. Check if remote control of OsmAnd works with power from the 12V battery
 15. Clean the ESP32 and converter with alcohol, optionally it can be coated with clear coat as moisture protection
 15. Fix the ESP32 and converter with hot glue in the case. Fix also every cable with hot glue as protection against vibrations
 16. Install the case and switch unit on the motorcycle. For switched +12V, the tail light cable can be used. No relay should be necessary because the ESP32 uses very little power and is fused by a 1A fuse. Either solder it to the +12V cable and insulte it properly or use a T connector. T connectors are not always reliable.
-17. For ground use a screw connected to the frame or the screw at the battery
+17. For ground use a screw connected to the frame or connect it to the battery
