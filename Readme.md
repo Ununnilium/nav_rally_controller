@@ -18,7 +18,7 @@ Rally Roadbook Reader supports audio buttons as remote control. Therefore, we ju
 
 With a switch the user can selected if arrow keys for OsmAnd or audio keys for Rally Roadbook Reader are sent.
 
-For other apps like [Drive Mode Dashboard 2](Drive Mode Dashboard 2) or Google Maps which don't support keys, one would had to create an Android app which uses
+For other apps like [Drive Mode Dashboard 2](https://www.drivemodedashboard.com) or Google Maps which don't support keys, one would had to create an Android app which uses
 AccessibilityService or writes on a rooted device to "/dev/input/eventXX" to simulate touchscreen interactions on key presses.
 
 For OsmAnd, seven buttons (4 arrow keys, 2 zoom keys, recenter location) and a switch (audio- oder arrow key mode) are needed. Such a switch can be bought e.g. from Aliexpress.
