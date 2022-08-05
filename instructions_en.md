@@ -89,7 +89,7 @@ Ground –) must be connected to one of the "GND" pins. The ground side od the b
 8. Write down the current pin assocation in the code. Press every button/switch and write down the output, to correct the assocation in the code. When the switch is used, the messages will change a few time. That is no problem, the switch is not debounced because it is not necessary.
 9. Correct the pin numbers in the code and upload it
 10. Test the buttons/switch with OsmAnd und Rally Roadbook Reader
-11. remove USB cabel, then solder cables to 12V side of converter (drill a holebefore in case and pull it through). Connect to a 12V battery, check with a multimeter if the 5V pin is located like in this photo: <br /> <img src="img/converter.jpg" width="350"/>
+11. remove USB cabel, then solder cables to 12V side of converter (drill a hole in case and pull it through). Connect to a 12V battery, check with a multimeter if the 5V pin is located like in this photo: <br /> <img src="img/converter.jpg" width="350"/>
 12. Solder the +5V side of the converter with some leftover cable to VIN of the ESP32
 13. Solder – of the converter (– of 12 and 5V side is the same) to GND of ESP32. Ground side of the butoons/switch, GND of ESP32 –of the converter must all be connected to ground of the motorcycle
 14. Check if remote control of OsmAnd works with power from the 12V battery
