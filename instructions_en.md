@@ -49,7 +49,7 @@ For OsmAnd, seven buttons (4 arrow keys, 2 zoom keys, recenter location) and a s
 4. Add ESP32 to Arduino IDE: open "File" - "Preferences"  and add `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json` as URL: ![](img/arduino_board_manager_url.png)
 5. At "Tools" - "Board" "ESP32 Dev Module" has worked for me: ![](img/arduino_board.png)
 6. At "Tools" - "Port" selected the correct COM port from device manager: ![](img/arduino_com_port.png)
-7. Install the BLE keyboard library: open [this link](https://github.com/T-vK/ESP32-BLE-Keyboard/releases), download "ESP32-BLE-Keyboard.zip" from "Assets" and open the ZIP file at "Sketch" -> "Include Library" -> "Add .ZIP Library...": ![](img/arduino_add_zip.png)
+7. Install the BLE keyboard library: open [this link](https://github.com/T-vK/ESP32-BLE-Keyboard/releases), download "ESP32-BLE-Keyboard.zip" from "Assets" and open the ZIP file at "Sketch" -> "Include Library" -> "Add .ZIP Library...":<br />![](img/arduino_add_zip.png)
 8. Install the der Bounce2 library: open "Tools" - "Manage Libraries...", search for "bounce2" and install it: ![](img/arduino_libraries.png) ![](img/arduino_bounce2.png)
 9. Copy the code from [rally.ino](./rally.ino) in the editor window and save it somewhere
 10. Upload the code with the right arrow symbol: ![](img/arduino_upload.png)
