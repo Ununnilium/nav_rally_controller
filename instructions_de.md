@@ -51,7 +51,7 @@ Man braucht sieben Taster (4 Pfeiltasten, 2 Zoomtasten, zentrieren) und einen Sc
 6. Unter Tools - Port muss der im Gerätemanager gefundene Port eingestellt werden: ![Screenshot](img/arduino_com_port.png "Arduino COM Port")
 7. Installieren der BLE Keyboard-Bibliothek: [hier](https://github.com/T-vK/ESP32-BLE-Keyboard/releases) beim ersten "Assets" "ESP32-BLE-Keyboard.zip" herunterladen und die ZIP-Datei unter  "Sketch" -> "Include Library" -> "Add .ZIP Library..." hinzufügen: ![Screenshot](img/arduino_add_zip.png "Arduino Add ZIP Library")
 8. Installieren der Bounce2-Biliothek: Unter "Tools" - "Manage Libraries..." nach "bounce2" suchen und installieren: ![Screenshot](img/arduino_libraries.png "Manage Libraries") ![Screenshot](img/arduino_bounce2.png "Install Bounce2")
-9 Jetzt kopiert man den Code von [rally.ino](https://gist.github.com/Ununnilium/1eb56dc689a65065dde786e27264a70c) in das Editorfenster und speichert das Projekt irgendwo
+9 Jetzt kopiert man den Code von [rally.ino](./rally.ino) in das Editorfenster und speichert das Projekt irgendwo
 10. Und lädt ihn mit dem Symbol "Pfeil-nach-rechts" hoch: ![Screenshot](img/arduino_upload.png "Arduino COM Port")
 11. Man öffnet die serielle Konsole: ![Screenshot](img/arduino_serial.png "Serial Console")
 12. Man stellt 115200 baud als Geschwindigkeit ein: ![Screenshot](img/arduino_baud.png "Serial Console"). Der Output solle "Starting BLE work!" enthalten, falls nicht, ESP32 abstecken, neu einstecken und nochmals serielle Konsole öffnen
