@@ -1,41 +1,45 @@
-## Bauen einer Schaltereinheit zur Fernsteuerung von [OsmAnd](https://osmand.net) and [Rally Roadbook Reader](https://www.rallynavigator.com/rally-navigator-mobile-application)
+# Bauen einer Schaltereinheit zur Fernsteuerung von [OsmAnd](https://osmand.net) und [Rally Roadbook Reader](https://www.rallynavigator.com/rally-navigator-mobile-application)
 
-# Einleitung
+## Einleitung
 Bei OsmAnd kann die Fernsteuerung per Tastatur aktiviert werden, siehe dazu [hier](https://osmand.net/docs/user/map/interact-with-map/#external-input-device-buttons-android).
 Rally Roadbook Reader benutzt zur Navigation die Volumen- und Audio Vor-/Zurück-Knöpfe. Wir müssen also für beide Apps nur Tastendrücke wie von einer Bluetooth-Tastatur senden.
 Per Schalter sollte man umstellen können, ob Pfeiltasten für OsmAnd oder Audio-Tasten für Rally Roadbook Reader gesendet werden. Man braucht sieben Tastater und einen Schalter. Das notwendige Material kann man z.B. bei Aliexpress kaufen:
 
-# Benötigte Teile
- 
-| Schaltereinheit                                   | $ 16.60 |  | [https://www.aliexpress.com/item/1005002915264527.html](https://www.aliexpress.com/item/1005002915264527.html)  |
-| ESP32 38 Pin, andere Versionen müssten auch gehen | $ 5.00  |  | [https://a.aliexpress.com/\_mLu2LNQ](https://a.aliexpress.com/_mLu2LNQ)                                         |
-| Konverter 5V                                      | $ 1.80  |  | [https://a.aliexpress.com/\_m0LM53i](https://a.aliexpress.com/_m0LM53i)                                         |
-| Gehäuse ESP32 und Konverter 5V z.B. 80x38x22mm    | $ 1.50  |  | [https://a.aliexpress.com/\_m0X1o8g](https://a.aliexpress.com/_m0X1o8g)                                         |
-| Ethernetkabel 2m                                  | $ 4.20  |  | [https://a.aliexpress.com/\_mKSXbrK](https://a.aliexpress.com/_mKSXbrK)                                         |
-| Kopplung RJ45 Verbindung Ethernetkabel            | $ 3.00  |  | [https://a.aliexpress.com/\_mPd2p1Q](https://a.aliexpress.com/_mPd2p1Q)                                         |
-| Anschlusskabel mit Sicherungshalter und Stecker   | $ 3.80  |  | [https://www.aliexpress.com/item/4000920357198.html](https://www.aliexpress.com/item/4000920357198.html)        |
-| Stecker mit Kabel Anschluss Konverter             | $ 2.70  |  | [https://www.aliexpress.com/item/1005004300282231.html](https://www.aliexpress.com/item/1005004300282231.html?) |
-| Sicherung 1A Medium                               | $ 1.20  |  | [https://a.aliexpress.com/\_mtDgORW](https://a.aliexpress.com/_mtDgORW)                                         |
-| Schrumpfschlauch                                  | $ 3.00  |  | [https://a.aliexpress.com/\_mM2P9VA](https://a.aliexpress.com/_mM2P9VA)                                         |
-| Isolierband                                       |         |  |                                                                                                                 |
+## Benötigte Teile
+
+| Teil                                              | Preis   | Link Aliexpress |
+|---------------------------------------------------|---------|--|
+| Schaltereinheit                                   | $ 16.60 | [https://www.aliexpress.com/item/1005002915264527.html](https://www.aliexpress.com/item/1005002915264527.html)  |
+| ESP32 38 Pin, andere Versionen müssten auch gehen | $ 5.00  | [https://a.aliexpress.com/\_mLu2LNQ](https://a.aliexpress.com/_mLu2LNQ) |
+| Konverter 5V                                      | $ 1.80  |  [https://a.aliexpress.com/\_m0LM53i](https://a.aliexpress.com/_m0LM53i) |
+| Gehäuse ESP32 und Konverter 5V z.B. 80x38x22mm    | $ 1.50  | [https://a.aliexpress.com/\_m0X1o8g](https://a.aliexpress.com/_m0X1o8g) |
+| Ethernetkabel 2m                                  | $ 4.20  | [https://a.aliexpress.com/\_mKSXbrK](https://a.aliexpress.com/_mKSXbrK) |
+| Kopplung RJ45 Verbindung Ethernetkabel            | $ 3.00  | [https://a.aliexpress.com/\_mPd2p1Q](https://a.aliexpress.com/_mPd2p1Q) |
+| Anschlusskabel mit Sicherungshalter und Stecker   | $ 3.80  | [https://www.aliexpress.com/item/4000920357198.html](https://www.aliexpress.com/item/4000920357198.html) |
+| Stecker mit Kabel Anschluss Konverter             | $ 2.70  | [https://www.aliexpress.com/item/1005004300282231.html](https://www.aliexpress.com/item/1005004300282231.html?) |
+| Sicherung 1A Medium                               | $ 1.20  | [https://a.aliexpress.com/\_mtDgORW](https://a.aliexpress.com/_mtDgORW) |
+| Schrumpfschlauch                                  | $ 3.00  | [https://a.aliexpress.com/\_mM2P9VA](https://a.aliexpress.com/_mM2P9VA) |
+| Isolierband                                       |         |  |
 | Kabelbinder                                       |         |  |
 
 
-## Zusätzliche Teile für ohne Löten
+### Zusätzliche Teile für lötfreie Verbindung
 
-| Konverter 5V, nur Kabelanschluss (statt Konverter oben) | $ 3.50 |  | [https://a.aliexpress.com/\_m0lBVHO](https://a.aliexpress.com/_m0lBVHO)                                        |                                                                      |
-| Schraubanschluss-Adapter ESP32                          | $ 6.70 |  | [https://a.aliexpress.com/\_mMmdk12](https://a.aliexpress.com/_mMmdk12)                                        |                                                                      |
-| Heissluft-Lötverbinder                                  | $ 6.10 |  | [https://www.aliexpress.com/item/1005002538906794.html](https://www.aliexpress.com/item/1005002538906794.html) |                                                                      |
-| Gehäuse z.B. 125x80x32mm (statt Gehäuse oben)           | $ 3.00 |  | [https://a.aliexpress.com/\_m0X1o8g](https://a.aliexpress.com/_m0X1o8g)                                        | prüfen, ob das unter Sitzbank passt                                  |
-| Stromdieb                                               | $ 2.00 |  | [https://www.aliexpress.com/item/1005001792678305.html](https://www.aliexpress.com/item/1005001792678305.html) | Zur Abnahme z.B. von Rücklicht. Pfusch, aber Stromstärke sehr gering |
+| Teil                                              | Preis   | Link Aliexpress |
+|---------------------------------------------------|---------|--|
+| Konverter 5V, nur Kabelanschluss (statt Konverter oben) | $ 3.50 | [https://a.aliexpress.com/\_m0lBVHO](https://a.aliexpress.com/_m0lBVHO)                                        |                                                                      |
+| Schraubanschluss-Adapter ESP32                          | $ 6.70 | [https://a.aliexpress.com/\_mMmdk12](https://a.aliexpress.com/_mMmdk12)                                        |                                                                      |
+| Heissluft-Lötverbinder                                  | $ 6.10 | [https://www.aliexpress.com/item/1005002538906794.html](https://www.aliexpress.com/item/1005002538906794.html) |                                                                      |
+| Gehäuse z.B. 125x80x32mm (statt Gehäuse oben)           | $ 3.00 | [https://a.aliexpress.com/\_m0X1o8g](https://a.aliexpress.com/_m0X1o8g)                                        | prüfen, ob das unter Sitzbank passt                                  |
+| Stromdieb                                               | $ 2.00 | [https://www.aliexpress.com/item/1005001792678305.html](https://www.aliexpress.com/item/1005001792678305.html) | Zur Abnahme z.B. von Rücklicht. Pfusch, aber Stromstärke sehr gering |
 
-# Einrichten des ESP32
+## Einrichten des ESP32
 
 1. Richtige Treiber für USB-Serial-Konverterchip des jeweiligen ESP32-Boards installieren. Möglicherweise ist der Treiber in Windows bereits enthalten. Dann kann man direkt zu Schritt 2 gehen. Falls es einen CP2102 ist, siehe [hier](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads). Falls es einen CH9102X-Chip ist, siehe [hier](https://www.rudolfschafing.de/2021/05/18/esp32-wifi-bluetooth-mit-arduino-ide/).
  
 2. Gerätemanager öffnen und schauen, welcher COM-Port dem USB-Adapterchip zugeordnet ist: ![Screenshot](img/device_manager.png "Gerätemanager")
 3. Arduino-IDE installieren: https://www.arduino.cc/en/software
-4. Die ESP32 zu Arduino hinzufügen: "File" ("Datei") - "Preferences" ("Einstellungen" ?) öffnen und `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json` als URl einfügen: ![Screenshot](img/arduino_board_manager_url.png "Arduino Board URL")
+4. Die ESP32 zu Arduino hinzufügen: "File" ("Datei") - "Preferences" ("Einstellungen") öffnen und `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json` als URl einfügen: ![Screenshot](img/arduino_board_manager_url.png "Arduino Board URL")
 5. Unter Tools - Board hat bei mir "ESP32 Dev Module" funktioniert: ![Screenshot](img/arduino_board.png "Arduino Board")
 6. Unter Tools - Port muss der im Gerätemanager gefundene Port eingestellt werden: ![Screenshot](img/arduino_com_port.png "Arduino COM Port")
 7. Installieren der BLE Keyboard-Bibliothek: [hier](https://github.com/T-vK/ESP32-BLE-Keyboard/releases) beim ersten "Assets" "ESP32-BLE-Keyboard.zip" herunterladen und die ZIP-Datei unter  "Sketch" -> "Include Library" -> "Add .ZIP Library..." hinzufügen: ![Screenshot](img/arduino_add_zip.png "Arduino Add ZIP Library")
@@ -47,7 +51,7 @@ Per Schalter sollte man umstellen können, ob Pfeiltasten für OsmAnd oder Audio
 13. Man sollte jetzt bereits das gewünschte Handy-Tablet per Bluetooth verbinden können
 
 
-# ESP32 anschliessen
+## ESP32 anschliessen
 
 Für die Schaltereinheit muss man einige Anschlüsse anlöten. Dazu sollte man einen temperaturgeregelten Lötkolben/Lötstation und gutes Lötzinn haben, am besten für Anfänger ist das in der EU/Schweiz seit kurzem verbotene bleihaltige Lötzinn (z.B. Pb 40% Sn 60% oder Pb 38% Sn 60% Cu 2%.). Für eine Anleitung siehe [hier](https://www.elektronik-kompendium.de/sites/grd/0705261.htm).
 
