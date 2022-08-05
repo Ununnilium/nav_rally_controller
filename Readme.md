@@ -1,14 +1,25 @@
-# Bauen einer Schaltereinheit zur Fernsteuerung von [OsmAnd](https://osmand.net) und [Rally Roadbook Reader](https://www.rallynavigator.com/rally-navigator-mobile-application)
+# Motorcycle Remote Controller for [OsmAnd](https://osmand.net) and [Rally Roadbook Reader](https://www.rallynavigator.com/rally-navigator-mobile-application)
 
-## Einleitung
+The German version is [here](./instructions_de.md).
+
+## Introduction
 
 This tutorial and the code is based on [NordicRally's tutorial](https://www.instructables.com/Rally-Controller-With-Bluetooth/). The 3D-printed case for the buttons was replaced by a combined switch from Aliexpress and the code was modified sligthly.
 
+The author did not use the linked Aliexpress switch unit and 5V converter because he was not aware of it. Instead, an own
+switch unit was built from a piece of plastic and hot glue.
+![](img/self_made.png)
+As 5V converter, an old cigarette lighter to USB converter was opened and used. If there is a problem,
+please open a GitHub issue.
+
 OsmAnd supports keyboard control, see [here](https://osmand.net/docs/user/map/interact-with-map/#external-input-device-buttons-android).
 
-Rally Roadbook Reader uses audio buttons. Therefore, we just have to simulate a Bluetooth keyboard for both apps.
+Rally Roadbook Reader supports audio buttons as remote control. Therefore, we just have to simulate a Bluetooth keyboard for both apps.
 
-With a switch the user can selected is arrow keys for OsmAnd or audio keys for Rally Roadbook Reader are sent. 
+With a switch the user can selected if arrow keys for OsmAnd or audio keys for Rally Roadbook Reader are sent.
+
+For other apps like [Drive Mode Dashboard 2](Drive Mode Dashboard 2) or Google Maps which don't support keys, one would had to create an Android app which uses
+AccessibilityService or writes on a rooted device to "/dev/input/eventXX" to simulate touchscreen interactions on key presses.
 
 For OsmAnd, seven buttons (4 arrow keys, 2 zoom keys, recenter location) and a switch (audio- oder arrow key mode) are needed. Such a switch can be bought e.g. from Aliexpress.
 
@@ -42,16 +53,16 @@ For OsmAnd, seven buttons (4 arrow keys, 2 zoom keys, recenter location) and a s
 
 ## Configure ESP32
 
-1. Install driver for USB/serial converter chip of the ESP32 board. Sometimes Windows installs the driver automatically. Else if it is an CP2102, see [here](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads). If it is an CH9102X-Chip ist, siehe [here](https://arduino.stackexchange.com/q/88522).
+1. Install driver for USB/serial converter chip of the ESP32 board. Sometimes Windows installs the driver automatically. Else if it is an CP2102, see [here](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads). If it is an CH9102X-Chip, see [here](https://arduino.stackexchange.com/q/88522).
  
-2. Open device manager and check, which COM port is associeted to the ESP32: ![](img/device_manager.png)
+2. Open device manager and check which COM port is used by the ESP32: ![](img/device_manager.png)
 3. Install Arduino IDE: https://www.arduino.cc/en/software
 4. Add ESP32 to Arduino IDE: open "File" - "Preferences"  and add `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json` as URL: ![](img/arduino_board_manager_url.png)
-5. At "Tools" - "Board" "ESP32 Dev Module" has worked for me: ![](img/arduino_board.png)
+5. At "Tools" - "Board" select "ESP32 Dev Module": ![](img/arduino_board.png)
 6. At "Tools" - "Port" selected the correct COM port from device manager: ![](img/arduino_com_port.png)
 7. Install the BLE keyboard library: open [this link](https://github.com/T-vK/ESP32-BLE-Keyboard/releases), download "ESP32-BLE-Keyboard.zip" from "Assets" and open the ZIP file at "Sketch" -> "Include Library" -> "Add .ZIP Library...": ![](img/arduino_add_zip.png)
 8. Install the der Bounce2 library: open "Tools" - "Manage Libraries...", search for "bounce2" and install it: ![](img/arduino_libraries.png) ![](img/arduino_bounce2.png)
-9. Copy the code from [rally.ino](./rally.ino) in the editor window and save it somewhere
+9. Copy the code from [rally.ino](./rally.ino) in the editor window and save it
 10. Upload the code with the right arrow symbol: ![](img/arduino_upload.png)
 11. Open the serial console: ![](img/arduino_serial.png)
 12. Select "115200 baud" as speed: ![](img/arduino_baud.png). The console output should contain "Starting BLE work!", if not, disconnect ESP32, connect again and open the serial console
