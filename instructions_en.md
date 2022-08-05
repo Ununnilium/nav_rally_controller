@@ -96,4 +96,4 @@ Ground –) must be connected to one of the "GND" pins. The ground side od the b
 15. Clean the ESP32 and converter with alcohol, optionally it can be coated with clear coat as moisture protection
 15. Fix the ESP32 and converter with hot glue in the case. Fix also every cable with hot glue as protection against vibrations
 16. Install the case and switch unit on the motorcycle. For switched +12V, the tail light cable can be used. No relay should be necessary because the ESP32 uses very little power and is fused by a 1A fuse. Either solder it to the +12V cable and insulte it properly or use a T connector. T connectors are not always reliable.
-17. For ground and screw connected to the frame or directly the screw at the battery can be used
+17. For ground use a screw connected to the frame or the screw at the battery
