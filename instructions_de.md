@@ -1,14 +1,20 @@
 # Bauen einer Schaltereinheit zur Fernsteuerung von [OsmAnd](https://osmand.net) und [Rally Roadbook Reader](https://www.rallynavigator.com/rally-navigator-mobile-application)
 
+For the English version see [here](./Readme.md).
+
 ## Einleitung
 
 Diese Anleitung und der Code basiert auf dem Projekt von [NordicRally](https://www.instructables.com/Rally-Controller-With-Bluetooth/). Seine 3D-gedruckte Schaltereinheit wurde lediglich durche eine von Aliexpress ersetzen und der Code so angepasst, dass es sauber funktioniert.
 
+Ich habe selbst nicht diese Aliexpress-Schaltereinheit benutzt, da ich von dieser keine Kenntnis hatte. Ich habe auch einen anderen Zigarettenanzünder-USB-Adapter verwendet.<br />![](img/self_made.jpg)
+
 Bei OsmAnd kann die Fernsteuerung per Tastatur aktiviert werden, siehe dazu [hier](https://osmand.net/docs/user/map/interact-with-map/#external-input-device-buttons-android).
 
-Rally Roadbook Reader benutzt zur Navigation die Volumen- und Audio Vor-/Zurück-Knöpfe. Wir müssen also für beide Apps nur Tastendrücke wie von einer Bluetooth-Tastatur senden.
+Rally Roadbook Reader benutzt zur Navigation die Volumen- und Audio Vor-/Zurück-Knöpfe. Man muss also für beide Apps nur Tastendrücke wie von einer Bluetooth-Tastatur senden.
 
-Per Schalter sollte man umstellen können, ob Pfeiltasten für OsmAnd oder Audio-Tasten für Rally Roadbook Reader gesendet werden. 
+Für andere Apps wie [Drive Mode Dashboard 2](https://www.drivemodedashboard.com) oder Google Maps ohne Tasten-Support müsste man eine Android-App programieren, die per AccessibilityService oder auf einem gerooteten Gerät durch schreiben in "/dev/input/eventXX" Touchscreen-Interaktionen bei Tastendruck simuliert.
+
+Per Schalter kann man umstellen, ob Pfeiltasten für OsmAnd oder Audio-Tasten für Rally Roadbook Reader gesendet werden.
 
 Man braucht sieben Taster (4 Pfeiltasten, 2 Zoomtasten, zentrieren) und einen Schalter (Audio- oder Pfeiltastenmodus). Eine solche Schaltereinheit gibt es bei z.B. bei Aliexpress.
 
