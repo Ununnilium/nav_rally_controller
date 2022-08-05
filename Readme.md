@@ -49,7 +49,7 @@ For OsmAnd, seven buttons (4 arrow keys, 2 zoom keys, recenter location) and a s
 | screwed connection adapter ESP32                          | $ 6.70 | [https://a.aliexpress.com/\_mMmdk12](https://a.aliexpress.com/_mMmdk12)                                        |                                                                      |
 | heat shrink connectors                                  | $ 6.10 | [https://www.aliexpress.com/item/1005002538906794.html](https://www.aliexpress.com/item/1005002538906794.html) |                                                                      |
 | case e.g. 125x80x32mm (instead case above)           | $ 3.00 | [https://a.aliexpress.com/\_m0X1o8g](https://a.aliexpress.com/_m0X1o8g)                                        | test if it still fits below seat                                  |
-| T-connector                                               | $ 2.00 | [https://www.aliexpress.com/item/1005001792678305.html](https://www.aliexpress.com/item/1005001792678305.html) | to get power e.g. from tail light |
+| T connector                                               | $ 2.00 | [https://www.aliexpress.com/item/1005001792678305.html](https://www.aliexpress.com/item/1005001792678305.html) | to get power e.g. from tail light |
 
 ## Configure ESP32
 
@@ -60,7 +60,7 @@ For OsmAnd, seven buttons (4 arrow keys, 2 zoom keys, recenter location) and a s
 4. Add ESP32 to Arduino IDE: open "File" - "Preferences"  and add `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json` as URL: ![](img/arduino_board_manager_url.png)
 5. At "Tools" - "Board" select "ESP32 Dev Module": ![](img/arduino_board.png)
 6. At "Tools" - "Port" selected the correct COM port from device manager: ![](img/arduino_com_port.png)
-7. Install the BLE keyboard library: open [this link](https://github.com/T-vK/ESP32-BLE-Keyboard/releases), download "ESP32-BLE-Keyboard.zip" from "Assets" and open the ZIP file at "Sketch" -> "Include Library" -> "Add .ZIP Library...": ![](img/arduino_add_zip.png)
+7. Install the BLE keyboard library: open [this link](https://github.com/T-vK/ESP32-BLE-Keyboard/releases), download "ESP32-BLE-Keyboard.zip" from "Assets" and open the ZIP file at "Sketch" -> "Include Library" -> "Add .ZIP Library...":<br />![](img/arduino_add_zip.png)
 8. Install the der Bounce2 library: open "Tools" - "Manage Libraries...", search for "bounce2" and install it: ![](img/arduino_libraries.png) ![](img/arduino_bounce2.png)
 9. Copy the code from [rally.ino](./rally.ino) in the editor window and save it
 10. Upload the code with the right arrow symbol: ![](img/arduino_upload.png)
@@ -100,11 +100,11 @@ Ground –) must be connected to one of the "GND" pins. The ground side od the b
 8. Write down the current pin assocation in the code. Press every button/switch and write down the output, to correct the assocation in the code. When the switch is used, the messages will change a few time. That is no problem, the switch is not debounced because it is not necessary.
 9. Correct the pin numbers in the code and upload it
 10. Test the buttons/switch with OsmAnd und Rally Roadbook Reader
-11. remove USB cabel, then solder cables to 12V side of converter (drill a holebefore in case and pull it through). Connect to a 12V battery, check with a multimeter if the 5V pin is located like in this photo: <br /> <img src="img/converter.jpg" width="350"/>
+11. remove USB cabel, then solder cables to 12V side of converter (drill a hole in case and pull it through). Connect to a 12V battery, check with a multimeter if the 5V pin is located like in this photo: <br /> <img src="img/converter.jpg" width="350"/>
 12. Solder the +5V side of the converter with some leftover cable to VIN of the ESP32
 13. Solder – of the converter (– of 12 and 5V side is the same) to GND of ESP32. Ground side of the butoons/switch, GND of ESP32 –of the converter must all be connected to ground of the motorcycle
 14. Check if remote control of OsmAnd works with power from the 12V battery
 15. Clean the ESP32 and converter with alcohol, optionally it can be coated with clear coat as moisture protection
 15. Fix the ESP32 and converter with hot glue in the case. Fix also every cable with hot glue as protection against vibrations
 16. Install the case and switch unit on the motorcycle. For switched +12V, the tail light cable can be used. No relay should be necessary because the ESP32 uses very little power and is fused by a 1A fuse. Either solder it to the +12V cable and insulte it properly or use a T connector. T connectors are not always reliable.
-17. For ground and screw connected to the frame or directly the screw at the battery can be used
+17. For ground use a screw connected to the frame or the screw at the battery
