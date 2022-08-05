@@ -38,7 +38,7 @@ For OsmAnd, seven buttons (4 arrow keys, 2 zoom keys, recenter location) and a s
 | screwed connection adapter ESP32                          | $ 6.70 | [https://a.aliexpress.com/\_mMmdk12](https://a.aliexpress.com/_mMmdk12)                                        |                                                                      |
 | heat shrink connectors                                  | $ 6.10 | [https://www.aliexpress.com/item/1005002538906794.html](https://www.aliexpress.com/item/1005002538906794.html) |                                                                      |
 | case e.g. 125x80x32mm (instead case above)           | $ 3.00 | [https://a.aliexpress.com/\_m0X1o8g](https://a.aliexpress.com/_m0X1o8g)                                        | test if it still fits below seat                                  |
-| T-connector                                               | $ 2.00 | [https://www.aliexpress.com/item/1005001792678305.html](https://www.aliexpress.com/item/1005001792678305.html) | to get power e.g. from tail light |
+| T connector                                               | $ 2.00 | [https://www.aliexpress.com/item/1005001792678305.html](https://www.aliexpress.com/item/1005001792678305.html) | to get power e.g. from tail light |
 
 ## Configure ESP32
 
