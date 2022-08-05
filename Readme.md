@@ -8,7 +8,7 @@ This tutorial and the code is based on [NordicRally's tutorial](https://www.inst
 
 The author did not use the linked Aliexpress switch unit and 5V converter because he was not aware of it. Instead, an own
 switch unit was built from a piece of plastic and hot glue.
-![](img/self_made.png)
+![](img/self_made.jpg)
 As 5V converter, an old cigarette lighter to USB converter was opened and used. If there is a problem,
 please open a GitHub issue.
 
