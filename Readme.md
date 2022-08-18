@@ -27,16 +27,16 @@ For OsmAnd, seven buttons (4 arrow keys, 2 zoom keys, recenter location) and a s
 
 | Part                                              | Price   | Link |
 |---------------------------------------------------|---------|--|
-| switch unit                                   | $ 16.60 | [https://www.aliexpress.com/item/1005002915264527.html](https://www.aliexpress.com/item/1005002915264527.html)  |
-| ESP32 38 pins | $ 5.00  | [https://a.aliexpress.com/\_mLu2LNQ](https://a.aliexpress.com/_mLu2LNQ) |
-| converter 5V                                      | $ 1.80  |  [https://a.aliexpress.com/\_m0LM53i](https://a.aliexpress.com/_m0LM53i) |
-| case for ESP32 and converter 5V e.g. 80x38x22mm    | $ 1.50  | [https://a.aliexpress.com/\_m0X1o8g](https://a.aliexpress.com/_m0X1o8g) |
-| ethernet cabel 2m                                  | $ 4.20  | [https://a.aliexpress.com/\_mKSXbrK](https://a.aliexpress.com/_mKSXbrK) |
-| coupler RJ45 to connect ethernet cable            | $ 3.00  | [https://a.aliexpress.com/\_mPd2p1Q](https://a.aliexpress.com/_mPd2p1Q) |
-| power cable with fuse and plug   | $ 3.80  | [https://www.aliexpress.com/item/4000920357198.html](https://www.aliexpress.com/item/4000920357198.html) |
-| plug with cable to connect converter            | $ 2.70  | [https://www.aliexpress.com/item/1005004300282231.html](https://www.aliexpress.com/item/1005004300282231.html?) |
-| fuse 1A medium                               | $ 1.20  | [https://a.aliexpress.com/\_mtDgORW](https://a.aliexpress.com/_mtDgORW) |
-| shrinking tubes                                  | $ 3.00  | [https://a.aliexpress.com/\_mM2P9VA](https://a.aliexpress.com/_mM2P9VA) |
+| switch unit                                   | $ 16.60 | https://www.aliexpress.com/item/1005002915264527.html  |
+| ESP32 38 pins | $ 5.00  |  |
+| converter 5V                                      | $ 1.80  |  https://www.aliexpress.com/item/1005003803774587.html |
+| case for ESP32 and converter 5V e.g. 80x38x22mm    | $ 1.50  |  |
+| ethernet cabel 2m                                  | $ 4.20  |  |
+| coupler RJ45 to connect ethernet cable            | $ 3.00  | [https://www.aliexpress.com/item/1005002554550894.html](https://www.aliexpress.com/item/1005002554550894.html) |
+| power cable with fuse and plug   | $ 3.80  | https://www.aliexpress.com/item/4000920357198.html |
+| plug with cable to connect converter            | $ 2.70  | https://www.aliexpress.com/item/1005004300282231.html |
+| fuse 1A medium                               | $ 1.20  | |
+| shrinking tubes                                  | $ 3.00  |  |
 | insulating tape                                       |         |  |
 | cable ties                                       |         |  |
 
@@ -45,10 +45,10 @@ For OsmAnd, seven buttons (4 arrow keys, 2 zoom keys, recenter location) and a s
 
 | Part                                              | Price   | Link |
 |---------------------------------------------------|---------|--|
-| converter 5V with cable (instead converter above) | $ 3.50 | [https://a.aliexpress.com/\_m0lBVHO](https://a.aliexpress.com/_m0lBVHO)                                        |                                                                      |
-| screwed connection adapter ESP32                          | $ 6.70 | [https://a.aliexpress.com/\_mMmdk12](https://a.aliexpress.com/_mMmdk12)                                        |                                                                      |
+| converter 5V with cable (instead converter above) | $ 3.50 | https://www.aliexpress.com/item/32805864042.html |                                                                      |
+| screwed connection adapter ESP32                          | $ 6.70 | https://www.aliexpress.com/item/1005004438768602.html      |                                                                      |
 | heat shrink connectors                                  | $ 6.10 | [https://www.aliexpress.com/item/1005002538906794.html](https://www.aliexpress.com/item/1005002538906794.html) |                                                                      |
-| case e.g. 125x80x32mm (instead case above)           | $ 3.00 | [https://a.aliexpress.com/\_m0X1o8g](https://a.aliexpress.com/_m0X1o8g)                                        | test if it still fits below seat                                  |
+| case e.g. 125x80x32mm (instead case above)           | $ 3.00 | | test if it still fits below seat                                  |
 | T connector                                               | $ 2.00 | [https://www.aliexpress.com/item/1005001792678305.html](https://www.aliexpress.com/item/1005001792678305.html) | to get power e.g. from tail light |
 
 ## Configure ESP32
